@@ -1,0 +1,171 @@
+{
+ "links": [
+  {
+   "source": "abranzyck",
+   "target": "abranzyck",
+   "value": 1
+  },
+  {
+   "source": "abranzyck",
+   "target": "diranged",
+   "value": 2
+  },
+  {
+   "source": "abranzyck",
+   "target": "ericthecat",
+   "value": 2
+  },
+  {
+   "source": "abranzyck",
+   "target": "fpj",
+   "value": 3
+  },
+  {
+   "source": "abranzyck",
+   "target": "mahadev",
+   "value": 5
+  },
+  {
+   "source": "abranzyck",
+   "target": "phunt",
+   "value": 4
+  },
+  {
+   "source": "abranzyck",
+   "target": "raja@cmbasics.com",
+   "value": 2
+  },
+  {
+   "source": "breed",
+   "target": "breed",
+   "value": 1
+  },
+  {
+   "source": "breed",
+   "target": "lakshman",
+   "value": 2
+  },
+  {
+   "source": "breed",
+   "target": "phunt",
+   "value": 2
+  },
+  {
+   "source": "diranged",
+   "target": "fpj",
+   "value": 1
+  },
+  {
+   "source": "diranged",
+   "target": "mahadev",
+   "value": 1
+  },
+  {
+   "source": "diranged",
+   "target": "raja@cmbasics.com",
+   "value": 1
+  },
+  {
+   "source": "ericthecat",
+   "target": "fpj",
+   "value": 1
+  },
+  {
+   "source": "ericthecat",
+   "target": "mahadev",
+   "value": 3
+  },
+  {
+   "source": "ericthecat",
+   "target": "phunt",
+   "value": 4
+  },
+  {
+   "source": "fpj",
+   "target": "mahadev",
+   "value": 1
+  },
+  {
+   "source": "fpj",
+   "target": "phunt",
+   "value": 1
+  },
+  {
+   "source": "fpj",
+   "target": "raja@cmbasics.com",
+   "value": 1
+  },
+  {
+   "source": "lakshman",
+   "target": "phunt",
+   "value": 1
+  },
+  {
+   "source": "mahadev",
+   "target": "mahadev",
+   "value": 3
+  },
+  {
+   "source": "mahadev",
+   "target": "phunt",
+   "value": 9
+  },
+  {
+   "source": "mahadev",
+   "target": "raja@cmbasics.com",
+   "value": 1
+  },
+  {
+   "source": "phunt",
+   "target": "phunt",
+   "value": 3
+  },
+  {
+   "source": "phunt",
+   "target": "rgs",
+   "value": 1
+  }
+ ],
+ "nodes": [
+  {
+   "group": 1,
+   "id": "abranzyck"
+  },
+  {
+   "group": 2,
+   "id": "breed"
+  },
+  {
+   "group": 3,
+   "id": "diranged"
+  },
+  {
+   "group": 1,
+   "id": "ericthecat"
+  },
+  {
+   "group": 1,
+   "id": "fpj"
+  },
+  {
+   "group": 2,
+   "id": "lakshman"
+  },
+  {
+   "group": 4,
+   "id": "mahadev"
+  },
+  {
+   "group": 1,
+   "id": "phunt"
+  },
+  {
+   "group": 3,
+   "id": "raja@cmbasics.com"
+  },
+  {
+   "group": 5,
+   "id": "rgs"
+  }
+ ]
+}

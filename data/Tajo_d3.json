@@ -1,0 +1,47 @@
+{
+ "links": [
+  {
+   "source": "goodljy",
+   "target": "goodljy",
+   "value": 1
+  },
+  {
+   "source": "goodljy",
+   "target": "jihoonson",
+   "value": 2
+  },
+  {
+   "source": "hyunsik",
+   "target": "hyunsik",
+   "value": 6
+  },
+  {
+   "source": "hyunsik",
+   "target": "jhkim",
+   "value": 4
+  },
+  {
+   "source": "hyunsik",
+   "target": "jihoonson",
+   "value": 1
+  }
+ ],
+ "nodes": [
+  {
+   "group": 1,
+   "id": "goodljy"
+  },
+  {
+   "group": 2,
+   "id": "hyunsik"
+  },
+  {
+   "group": 3,
+   "id": "jhkim"
+  },
+  {
+   "group": 1,
+   "id": "jihoonson"
+  }
+ ]
+}

@@ -2,7 +2,7 @@
 <html>
   <!-- Use the Source, Luke -->
   <head>
-    <title>CodeFlower Source code visualization</title>
+    <title>ConceptEvolve visualization</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <link type="text/css" rel="stylesheet" href="stylesheets/bootstrap.min.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,7 +45,7 @@ line.link {
         <p class="lead">This experiment visualizes the mutual concepts within a team</a>.</p>
         <form class="form-inline">
           <fieldset>
-          <label>Example projects from Jira repositories:</label>
+          <label>Example projects from some projects:</label>
           <select id="project">
             <option value="data/CommonsOGNL_d3.json">CommonsOGNL_d3</option>
             <option value="data/HadoopYARN_d3.json">HadoopYARN_d3</option>
@@ -61,7 +61,10 @@ line.link {
           </select>
           </fieldset>
         </form>
-        <div id="visualization"></div>
+        <div id="visualization">
+		<svg width="960" height="600"></svg>
+		
+		</div>
         <h2>Purpose</h2>
         <ul class="unstyled">
           <li>To understand the team individuals shareing similar concepts</li>
@@ -123,45 +126,92 @@ line.link {
         <!-- <div class="well span8 offset1"><strong>Tip</strong>: If you like the CodeFlower, you may also like another visualization I made with d3.js called <a href="http://redotheweb.com/DependencyWheel/">DependencyWheel</a>.</div> -->
       </div>
     </div>
-    <script type="text/javascript" src="javascripts/d3/d3.js"></script>
-    <script type="text/javascript" src="javascripts/d3/d3.geom.js"></script>
-    <script type="text/javascript" src="javascripts/d3/d3.layout.js"></script>
-    <script type="text/javascript" src="javascripts/CodeFlower.js"></script>
-    <script type="text/javascript" src="javascripts/dataConverter.js"></script>
-    <script type="text/javascript">
-      var currentCodeFlower;
-      var createCodeFlower = function(json) {
-        // update the jsonData textarea
-        document.getElementById('jsonData').value = JSON.stringify(json);
-        // remove previous flower to save memory
-        if (currentCodeFlower) currentCodeFlower.cleanup();
-        // adapt layout size to the total number of elements
-        var total = countElements(json);
-        w = parseInt(Math.sqrt(total) * 30, 10);
-        h = parseInt(Math.sqrt(total) * 30, 10);
-        // create a new CodeFlower
-        currentCodeFlower = new CodeFlower("#visualization", w, h).update(json);
-      };
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+	<script>
 
-      d3.json('data.json', createCodeFlower);
+	var svg = d3.select("svg"),
+		width = +svg.attr("width"),
+		height = +svg.attr("height");
 
-      document.getElementById('project').addEventListener('change', function() {
-        d3.json(this.value, createCodeFlower);
-      });
-      document.getElementById('jsonInput').addEventListener('submit', function(e) {
-        e.preventDefault();
-        document.getElementById('visualization').scrollIntoView();
-        var json = JSON.parse(document.getElementById('jsonData').value);
-        currentCodeFlower.update(json);
-      });
-      document.getElementById('jsonConverter').addEventListener('submit', function(e) {
-        e.preventDefault();
-        var origin = this.children[0].children[0].value;
-        var data = this.children[0].children[1].value;
-        var json = convertToJSON(data, origin);
-        document.getElementById('visualization').scrollIntoView();
-        createCodeFlower(json);
-      });
-    </script>
+	var color = d3.scaleOrdinal(d3.schemeCategory20);
+
+	var simulation = d3.forceSimulation()
+		.force("link", d3.forceLink().id(function(d) { return d.id; }))
+		.force("charge", d3.forceManyBody())
+		.force("center", d3.forceCenter(width / 2, height / 2));
+
+	d3.json("ZooKeeper_d3.json", function(error, graph) {
+	  if (error) throw error;
+
+	  var link = svg.append("g")
+		  .attr("class", "links")
+		.selectAll("line")
+		.data(graph.links)
+		.enter().append("line")
+		  .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
+
+	  var node = svg.append("g")
+		  .attr("class", "nodes")
+		.selectAll("g")
+		.data(graph.nodes)
+		.enter().append("g")
+		
+	  var circles = node.append("circle")
+		  .attr("r", 5)
+		  .attr("fill", function(d) { return color(d.group); })
+		  .call(d3.drag()
+			  .on("start", dragstarted)
+			  .on("drag", dragged)
+			  .on("end", dragended));
+
+	  var lables = node.append("text")
+		  .text(function(d) {
+			return d.id;
+		  })
+		  .attr('x', 6)
+		  .attr('y', 3);
+
+	  node.append("title")
+		  .text(function(d) { return d.id; });
+
+	  simulation
+		  .nodes(graph.nodes)
+		  .on("tick", ticked);
+
+	  simulation.force("link")
+		  .links(graph.links);
+
+	  function ticked() {
+		link
+			.attr("x1", function(d) { return d.source.x; })
+			.attr("y1", function(d) { return d.source.y; })
+			.attr("x2", function(d) { return d.target.x; })
+			.attr("y2", function(d) { return d.target.y; });
+
+		node
+			.attr("transform", function(d) {
+			  return "translate(" + d.x + "," + d.y + ")";
+			})
+	  }
+	});
+
+	function dragstarted(d) {
+	  if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+	  d.fx = d.x;
+	  d.fy = d.y;
+	}
+
+	function dragged(d) {
+	  d.fx = d3.event.x;
+	  d.fy = d3.event.y;
+	}
+
+	function dragended(d) {
+	  if (!d3.event.active) simulation.alphaTarget(0);
+	  d.fx = null;
+	  d.fy = null;
+	}
+	
+	</script>
   </body>
 </html>

@@ -140,6 +140,10 @@ line.link {
 		.force("charge", d3.forceManyBody())
 		.force("center", d3.forceCenter(width / 2, height / 2));
 
+	
+	 document.getElementById('project').addEventListener('change', function() {
+    
+      
 	d3.json("ZooKeeper_d3.json", function(error, graph) {
 	  if (error) throw error;
 
@@ -193,7 +197,7 @@ line.link {
 			  return "translate(" + d.x + "," + d.y + ")";
 			})
 	  }
-	});
+	})});
 
 	function dragstarted(d) {
 	  if (!d3.event.active) simulation.alphaTarget(0.3).restart();

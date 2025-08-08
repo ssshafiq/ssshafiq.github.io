@@ -1,0 +1,103 @@
+{
+ "links": [
+  {
+   "source": "c.bauer",
+   "target": "cvs",
+   "value": 6
+  },
+  {
+   "source": "cvs",
+   "target": "cvs",
+   "value": 14
+  },
+  {
+   "source": "cvs",
+   "target": "gavin",
+   "value": 2
+  },
+  {
+   "source": "cvs",
+   "target": "idumali",
+   "value": 2
+  },
+  {
+   "source": "cvs",
+   "target": "mgreer",
+   "value": 2
+  },
+  {
+   "source": "cvs",
+   "target": "steve",
+   "value": 2
+  },
+  {
+   "source": "gavin",
+   "target": "idumali",
+   "value": 1
+  },
+  {
+   "source": "gavin",
+   "target": "mgreer",
+   "value": 1
+  },
+  {
+   "source": "gavin",
+   "target": "steve",
+   "value": 1
+  },
+  {
+   "source": "idumali",
+   "target": "mgreer",
+   "value": 1
+  },
+  {
+   "source": "idumali",
+   "target": "steve",
+   "value": 1
+  },
+  {
+   "source": "max",
+   "target": "shamir",
+   "value": 1
+  },
+  {
+   "source": "mgreer",
+   "target": "steve",
+   "value": 1
+  }
+ ],
+ "nodes": [
+  {
+   "group": 1,
+   "id": "c.bauer"
+  },
+  {
+   "group": 2,
+   "id": "cvs"
+  },
+  {
+   "group": 2,
+   "id": "gavin"
+  },
+  {
+   "group": 2,
+   "id": "idumali"
+  },
+  {
+   "group": 3,
+   "id": "max"
+  },
+  {
+   "group": 2,
+   "id": "mgreer"
+  },
+  {
+   "group": 3,
+   "id": "shamir"
+  },
+  {
+   "group": 2,
+   "id": "steve"
+  }
+ ]
+}

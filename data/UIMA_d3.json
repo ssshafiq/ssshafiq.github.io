@@ -1,0 +1,129 @@
+{
+ "links": [
+  {
+   "source": "alally",
+   "target": "cwiklik",
+   "value": 1
+  },
+  {
+   "source": "alally",
+   "target": "pkluegl",
+   "value": 2
+  },
+  {
+   "source": "alally",
+   "target": "schor",
+   "value": 3
+  },
+  {
+   "source": "alally",
+   "target": "twgoetz",
+   "value": 1
+  },
+  {
+   "source": "cwiklik",
+   "target": "pkluegl",
+   "value": 6
+  },
+  {
+   "source": "cwiklik",
+   "target": "rec",
+   "value": 1
+  },
+  {
+   "source": "cwiklik",
+   "target": "schor",
+   "value": 5
+  },
+  {
+   "source": "cwiklik",
+   "target": "twgoetz",
+   "value": 2
+  },
+  {
+   "source": "lou.degenaro",
+   "target": "lou.degenaro",
+   "value": 3
+  },
+  {
+   "source": "lou.degenaro",
+   "target": "pkluegl",
+   "value": 5
+  },
+  {
+   "source": "lou.degenaro",
+   "target": "rec",
+   "value": 2
+  },
+  {
+   "source": "lou.degenaro",
+   "target": "schor",
+   "value": 7
+  },
+  {
+   "source": "pkluegl",
+   "target": "pkluegl",
+   "value": 15
+  },
+  {
+   "source": "pkluegl",
+   "target": "rec",
+   "value": 6
+  },
+  {
+   "source": "pkluegl",
+   "target": "schor",
+   "value": 16
+  },
+  {
+   "source": "pkluegl",
+   "target": "twgoetz",
+   "value": 6
+  },
+  {
+   "source": "rec",
+   "target": "schor",
+   "value": 2
+  },
+  {
+   "source": "schor",
+   "target": "schor",
+   "value": 4
+  },
+  {
+   "source": "schor",
+   "target": "twgoetz",
+   "value": 4
+  }
+ ],
+ "nodes": [
+  {
+   "group": 1,
+   "id": "alally"
+  },
+  {
+   "group": 1,
+   "id": "cwiklik"
+  },
+  {
+   "group": 2,
+   "id": "lou.degenaro"
+  },
+  {
+   "group": 1,
+   "id": "pkluegl"
+  },
+  {
+   "group": 2,
+   "id": "rec"
+  },
+  {
+   "group": 1,
+   "id": "schor"
+  },
+  {
+   "group": 1,
+   "id": "twgoetz"
+  }
+ ]
+}

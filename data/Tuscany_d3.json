@@ -1,0 +1,50 @@
+{
+ "links": [
+  {
+   "source": "aelder",
+   "target": "edwardsmj",
+   "value": 1
+  },
+  {
+   "source": "aelder",
+   "target": "luciano resende",
+   "value": 1
+  },
+  {
+   "source": "edwardsmj",
+   "target": "luciano resende",
+   "value": 1
+  },
+  {
+   "source": "simonslaws",
+   "target": "simonslaws",
+   "value": 1
+  }
+ ],
+ "nodes": [
+  {
+   "group": 1,
+   "id": "aelder"
+  },
+  {
+   "group": 1,
+   "id": "edwardsmj"
+  },
+  {
+   "group": 2,
+   "id": "luciano resende"
+  },
+  {
+   "group": 3,
+   "id": "rfeng"
+  },
+  {
+   "group": 4,
+   "id": "scottkurz"
+  },
+  {
+   "group": 5,
+   "id": "simonslaws"
+  }
+ ]
+}

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+  <!-- Use the Source, Luke -->
+  <head>
+    <title>dev concepts visualization</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <link type="text/css" rel="stylesheet" href="stylesheets/bootstrap.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="stylesheets/bootstrap-responsive.min.css" rel="stylesheet">
+    <!-- <link href='http://fonts.googleapis.com/css?family=Rosario:400,700' rel='stylesheet' type='text/css'> -->
+    <link type="text/css" rel="stylesheet" href="stylesheets/style.css"/>
+    <style>
+
+.links line {
+  stroke: #999;
+  stroke-opacity: 0.6;
+}
+
+.nodes circle {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+text {
+  font-family: sans-serif;
+  font-size: 10px;
+}
+
+</style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="container">
+        <h1>dev concepts visualization</h1>
+        <p class="lead">This experiment visualizes the mutual concepts within a team</a></p>
+        <form class="form-inline">
+          <fieldset>
+          <label>Example projects:</label>
+          <select id="project">
+		    <option value="data/ZooKeeper_d3.json">ZooKeeper_d3</option>
+            <option value="data/HadoopYARN_d3.json">HadoopYARN_d3</option>
+            <option value="data/HibernateORM_d3.json">HibernateORM_d3</option>
+            <option value="data/Tajo_d3.json">Tajo_d3</option>
+            <option value="data/Tuscany_d3.json">Tuscany_d3</option>
+            <option value="data/UIMA_d3.json">UIMA_d3</option>
+            <option value="data/zHibernate2_d3.json">zHibernate2_d3</option>
+            <!-- <option value="data/rails.json">rails / rails</option> -->
+            <!-- <option value="data/symfony.json">symfony / symfony (WARNING: will make your computer scream)</option> -->
+            <!-- <option value="data/zf2.json">zendframework / zf2 (WARNING: will make your computer scream -->
+          </select>
+          </fieldset>
+        </form>
+        <div id="visualization">
+		<svg width="500" height="500"></svg>		
+		</div>
+        <h2>Purpose</h2>
+        <ul class="unstyled">
+          <li>To understand the team individuals sharing similar concepts</li>
+          <li></li>
+          <li></li>
+        </ul>
+        <p></p>
+        <!-- <h2>Usage</h2> -->
+        <!-- <p>To create a CodeFlower, include the <code>CodeFlower.js</code> file together with <code>d3.js</code>, just like in this page. Create a new CodeFlower instance using a CSS selector (of the div where the flower should be inserted), and the width and height of the desired visualization. Then, bind JSON data to the flower using <code>CodeFlower.update()</code>, and you're done.</p> -->
+        <!-- <pre> -->
+<!-- var myFlower = new CodeFlower("#visualization", 300, 200); -->
+<!-- myflower.update(jsonData); -->
+        <!-- </pre> -->
+        <!-- <h2>Input data format</h2> -->
+        <!-- <p>The <code>jsonData</code> format taken as input to <code>update()</code> is extremely simple. It's a JavaScript object representing a file tree structure. Each node must have a <code>name</code> (the file or directory name), leaf nodes must have a <code>size</code> (the number of lines of code or the file), and directory nodes must have a <code>children</code> property containing an array of nodes. As an example, here is the input for the currently displayed CodeFlower. You can modify it at will and click the update button to see the effect of your changes on the CodeFlower.</p> -->
+        <!-- <form id="jsonInput"> -->
+        <!-- <fieldset> -->
+          <!-- <textarea id="jsonData"></textarea> -->
+          <!-- <div class="pull-right"> -->
+            <!-- <button type="submit" class="btn btn-primary btn-large">Update</button> -->
+          <!-- </div> -->
+        <!-- </fieldset> -->
+        <!-- </form> -->
+        <!-- <h2>Generating JSON for a project</h2> -->
+        <!-- <p>It's easy to generate loc metrics for any project, whatever the language. You can use <code>wc</code>, but this method requires cleaning the output and counts comments and blanks together with actual lines of code. Alternatively, you can use <code>cloc</code> (<a href="http://cloc.sourceforge.net/">http://cloc.sourceforge.net/</a>), which is open-source and makes the difference between real source code and comments. Here are three examples using <a href="http://github.com">GitHub</a> as a source.</p> -->
+        <!-- <pre> -->
+<!-- # Using curl and cloc (fast, accurate) -->
+<!-- $ curl https://nodeload.github.com/symfony/symfony/tar.gz/master | tar xvz -->
+<!-- $ cloc symfony-master --csv --by-file --report-file=symfony.cloc -->
+
+<!-- # Using git clone and cloc (slow, accurate) -->
+<!-- $ git clone git://github.com/symfony/symfony.git -->
+<!-- $ cloc symfony --csv --by-file --report-file=symfony.cloc -->
+
+<!-- # Using git clone and wc (slow, inaccurate) -->
+<!-- $ git clone git://github.com/symfony/symfony.git -->
+<!-- $ cd symfony -->
+<!-- $ git ls-files | xargs wc -l > symfony.wc -->
+        <!-- </pre> -->
+        <!-- <p>Once you have a loc metrics file, paste its content below and click on the convert button. This will update the CodeFlower and the JSON textarea, to let you save data for your own CodeFlowers.</p> -->
+        <!-- <form id="jsonConverter"> -->
+        <!-- <fieldset> -->
+          <!-- <select name="origin"> -->
+            <!-- <option value="cloc" selected>Origin: cloc</option> -->
+            <!-- <option value="ws">Origin: wc</option> -->
+          <!-- </select> -->
+          <!-- <textarea id="metricsData"></textarea> -->
+          <!-- <div class="pull-right"> -->
+            <!-- <button type="submit" class="btn btn-primary btn-large">Convert</button> -->
+          <!-- </div> -->
+        <!-- </fieldset> -->
+        <!-- </form> -->
+        <!-- <h2>Sharing your CodeFlowers</h2> -->
+        <!-- <p>The best way to share your CodeFlowers is to use <a href="http://pages.github.com/">GitHub Pages</a>, just like this very page. So just fork the <a href="https://github.com/fzaninotto/CodeFlower"><code>fzaninotto/CodeFlower</code></a> repository, add your own JSON data under the <code>data</code> directory, update the options of the dropdown list in the <code>index.html</code> file accordingly, commit the code, and push to the <code>gh-pages</code> branch. GitHub will publish the result for you.</p> -->
+        <!-- <h2>Licence</h2> -->
+        <!-- <p>All this work is open-source, published by <a href="https://twitter.com/francoisz">François Zaninotto</a> under the MIT license. That means that nothing prevents you from growing as many CodeFlowers as you want!</p> -->
+        <!-- <a href="https://github.com/fzaninotto/CodeFlower"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a> -->
+
+        <!-- <div class="well span8 offset1"><strong>Tip</strong>: If you like the CodeFlower, you may also like another visualization I made with d3.js called <a href="http://redotheweb.com/DependencyWheel/">DependencyWheel</a>.</div> -->
+      </div>
+    </div>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+	<script>
+
+	d3.selectAll("svg > *").remove();
+	var svg = d3.select("svg"),
+		width = +svg.attr("width"),
+		height = +svg.attr("height");
+
+	var color = d3.scaleOrdinal(d3.schemeCategory20);
+
+	var simulation = d3.forceSimulation()
+		.force("link", d3.forceLink().id(function(d) { return d.id; }))
+		.force("charge", d3.forceManyBody())
+		.force("center", d3.forceCenter(width / 2, height / 2));
+		
+	d3.json("data/ZooKeeper_d3.json", function(error, graph) {
+		  if (error) throw error;
+
+		  var link = svg.append("g")
+			  .attr("class", "links")
+			.selectAll("line")
+			.data(graph.links)
+			.enter().append("line")
+			  .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
+
+		  var node = svg.append("g")
+			  .attr("class", "nodes")
+			.selectAll("g")
+			.data(graph.nodes)
+			.enter().append("g")
+			
+		  var circles = node.append("circle")
+			  .attr("r", 5)
+			  .attr("fill", function(d) { return color(d.group); })
+			  .call(d3.drag()
+				  .on("start", dragstarted)
+				  .on("drag", dragged)
+				  .on("end", dragended));
+
+		  var lables = node.append("text")
+			  .text(function(d) {
+				return d.id;
+			  })
+			  .attr('x', 6)
+			  .attr('y', 3);
+
+		  node.append("title")
+			  .text(function(d) { return d.id; });
+
+		  simulation
+			  .nodes(graph.nodes)
+			  .on("tick", ticked);
+
+		  simulation.force("link")
+			  .links(graph.links);
+
+		  function ticked() {
+			link
+				.attr("x1", function(d) { return d.source.x; })
+				.attr("y1", function(d) { return d.source.y; })
+				.attr("x2", function(d) { return d.target.x; })
+				.attr("y2", function(d) { return d.target.y; });
+
+			node
+				.attr("transform", function(d) {
+				  return "translate(" + d.x + "," + d.y + ")";
+				})
+		  }
+		});
+	
+	document.getElementById('project').addEventListener('change', function() {
+		d3.selectAll("svg > *").remove();
+		var svg = d3.select("svg"),
+		width = +svg.attr("width"),
+		height = +svg.attr("height");
+
+		var color = d3.scaleOrdinal(d3.schemeCategory20);
+
+		var simulation = d3.forceSimulation()
+			.force("link", d3.forceLink().id(function(d) { return d.id; }))
+			.force("charge", d3.forceManyBody())
+			.force("center", d3.forceCenter(width / 2, height / 2));
+			
+		d3.json(this.value, function(error, graph) {
+		  if (error) throw error;
+
+		  var link = svg.append("g")
+			  .attr("class", "links")
+			.selectAll("line")
+			.data(graph.links)
+			.enter().append("line")
+			  .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
+
+		  var node = svg.append("g")
+			  .attr("class", "nodes")
+			.selectAll("g")
+			.data(graph.nodes)
+			.enter().append("g")
+			
+		  var circles = node.append("circle")
+			  .attr("r", 5)
+			  .attr("fill", function(d) { return color(d.group); })
+			  .call(d3.drag()
+				  .on("start", dragstarted)
+				  .on("drag", dragged)
+				  .on("end", dragended));
+
+		  var lables = node.append("text")
+			  .text(function(d) {
+				return d.id;
+			  })
+			  .attr('x', 6)
+			  .attr('y', 3);
+
+		  node.append("title")
+			  .text(function(d) { return d.id; });
+
+		  simulation
+			  .nodes(graph.nodes)
+			  .on("tick", ticked);
+
+		  simulation.force("link")
+			  .links(graph.links);
+
+		  function ticked() {
+			link
+				.attr("x1", function(d) { return d.source.x; })
+				.attr("y1", function(d) { return d.source.y; })
+				.attr("x2", function(d) { return d.target.x; })
+				.attr("y2", function(d) { return d.target.y; });
+
+			node
+				.attr("transform", function(d) {
+				  return "translate(" + d.x + "," + d.y + ")";
+				})
+		  }
+		  
+		  function dragstarted(d) {
+		  if (!d3.event.active) simulation.alpha(0.3).restart();
+		  d.fx = d.x;
+		  d.fy = d.y;
+		}
+
+		function dragged(d) {
+		  d.fx = d3.event.x;
+		  d.fy = d3.event.y;
+		}
+
+		function dragended(d) {
+		  if (!d3.event.active) simulation.alphaTarget(0);
+		  d.fx = null;
+		  d.fy = null;
+		}
+		  
+		})});
+
+		function dragstarted(d) {
+		  if (!d3.event.active) simulation.alpha(0.3).restart();
+		  d.fx = d.x;
+		  d.fy = d.y;
+		}
+
+		function dragged(d) {
+		  d.fx = d3.event.x;
+		  d.fy = d3.event.y;
+		}
+
+		function dragended(d) {
+		  if (!d3.event.active) simulation.alphaTarget(0);
+		  d.fx = null;
+		  d.fy = null;
+		}
+	
+	</script>
+  </body>
+</html>

@@ -1,0 +1,1552 @@
+{
+ "links": [
+  {
+   "source": "acoliver",
+   "target": "adamw",
+   "value": 2
+  },
+  {
+   "source": "acoliver",
+   "target": "adar",
+   "value": 1
+  },
+  {
+   "source": "acoliver",
+   "target": "afletcher",
+   "value": 3
+  },
+  {
+   "source": "acoliver",
+   "target": "bob lai",
+   "value": 2
+  },
+  {
+   "source": "acoliver",
+   "target": "brmeyer",
+   "value": 8
+  },
+  {
+   "source": "acoliver",
+   "target": "ceki",
+   "value": 1
+  },
+  {
+   "source": "acoliver",
+   "target": "cvs",
+   "value": 3
+  },
+  {
+   "source": "acoliver",
+   "target": "emmanuel",
+   "value": 2
+  },
+  {
+   "source": "acoliver",
+   "target": "galder.zamarreno@jboss.com",
+   "value": 1
+  },
+  {
+   "source": "acoliver",
+   "target": "gavin",
+   "value": 1
+  },
+  {
+   "source": "acoliver",
+   "target": "gbadner",
+   "value": 4
+  },
+  {
+   "source": "acoliver",
+   "target": "gsmet",
+   "value": 1
+  },
+  {
+   "source": "acoliver",
+   "target": "gwa",
+   "value": 1
+  },
+  {
+   "source": "acoliver",
+   "target": "juergen.zimmermann",
+   "value": 1
+  },
+  {
+   "source": "acoliver",
+   "target": "laeubi",
+   "value": 1
+  },
+  {
+   "source": "acoliver",
+   "target": "lukasz.antoniak",
+   "value": 6
+  },
+  {
+   "source": "acoliver",
+   "target": "micw",
+   "value": 2
+  },
+  {
+   "source": "acoliver",
+   "target": "paul4christ79",
+   "value": 1
+  },
+  {
+   "source": "acoliver",
+   "target": "piofinsy",
+   "value": 2
+  },
+  {
+   "source": "acoliver",
+   "target": "sdouglass",
+   "value": 1
+  },
+  {
+   "source": "acoliver",
+   "target": "smarlow@redhat.com",
+   "value": 7
+  },
+  {
+   "source": "acoliver",
+   "target": "sslavic",
+   "value": 1
+  },
+  {
+   "source": "acoliver",
+   "target": "steve",
+   "value": 25
+  },
+  {
+   "source": "acoliver",
+   "target": "stliu",
+   "value": 2
+  },
+  {
+   "source": "acoliver",
+   "target": "teinacher",
+   "value": 2
+  },
+  {
+   "source": "acoliver",
+   "target": "valotas",
+   "value": 1
+  },
+  {
+   "source": "acoliver",
+   "target": "washley",
+   "value": 1
+  },
+  {
+   "source": "adamw",
+   "target": "adar",
+   "value": 1
+  },
+  {
+   "source": "adamw",
+   "target": "afletcher",
+   "value": 2
+  },
+  {
+   "source": "adamw",
+   "target": "brmeyer",
+   "value": 2
+  },
+  {
+   "source": "adamw",
+   "target": "cvs",
+   "value": 1
+  },
+  {
+   "source": "adamw",
+   "target": "galder.zamarreno@jboss.com",
+   "value": 1
+  },
+  {
+   "source": "adamw",
+   "target": "gbadner",
+   "value": 1
+  },
+  {
+   "source": "adamw",
+   "target": "gsmet",
+   "value": 1
+  },
+  {
+   "source": "adamw",
+   "target": "juergen.zimmermann",
+   "value": 1
+  },
+  {
+   "source": "adamw",
+   "target": "lukasz.antoniak",
+   "value": 3
+  },
+  {
+   "source": "adamw",
+   "target": "smarlow@redhat.com",
+   "value": 3
+  },
+  {
+   "source": "adamw",
+   "target": "steve",
+   "value": 6
+  },
+  {
+   "source": "adamw",
+   "target": "stliu",
+   "value": 1
+  },
+  {
+   "source": "adar",
+   "target": "afletcher",
+   "value": 1
+  },
+  {
+   "source": "adar",
+   "target": "brmeyer",
+   "value": 4
+  },
+  {
+   "source": "adar",
+   "target": "c.bauer",
+   "value": 1
+  },
+  {
+   "source": "adar",
+   "target": "ceki",
+   "value": 2
+  },
+  {
+   "source": "adar",
+   "target": "gbadner",
+   "value": 1
+  },
+  {
+   "source": "adar",
+   "target": "gsmet",
+   "value": 1
+  },
+  {
+   "source": "adar",
+   "target": "gwa",
+   "value": 1
+  },
+  {
+   "source": "adar",
+   "target": "juergen.zimmermann",
+   "value": 1
+  },
+  {
+   "source": "adar",
+   "target": "lukasz.antoniak",
+   "value": 2
+  },
+  {
+   "source": "adar",
+   "target": "sdouglass",
+   "value": 1
+  },
+  {
+   "source": "adar",
+   "target": "smarlow@redhat.com",
+   "value": 1
+  },
+  {
+   "source": "adar",
+   "target": "steve",
+   "value": 8
+  },
+  {
+   "source": "adar",
+   "target": "teinacher",
+   "value": 1
+  },
+  {
+   "source": "adar",
+   "target": "winter",
+   "value": 1
+  },
+  {
+   "source": "afletcher",
+   "target": "bob lai",
+   "value": 2
+  },
+  {
+   "source": "afletcher",
+   "target": "brmeyer",
+   "value": 6
+  },
+  {
+   "source": "afletcher",
+   "target": "cbredesen",
+   "value": 1
+  },
+  {
+   "source": "afletcher",
+   "target": "ceki",
+   "value": 1
+  },
+  {
+   "source": "afletcher",
+   "target": "cvs",
+   "value": 2
+  },
+  {
+   "source": "afletcher",
+   "target": "emmanuel",
+   "value": 1
+  },
+  {
+   "source": "afletcher",
+   "target": "galder.zamarreno@jboss.com",
+   "value": 1
+  },
+  {
+   "source": "afletcher",
+   "target": "gavin",
+   "value": 1
+  },
+  {
+   "source": "afletcher",
+   "target": "gbadner",
+   "value": 4
+  },
+  {
+   "source": "afletcher",
+   "target": "gionn",
+   "value": 1
+  },
+  {
+   "source": "afletcher",
+   "target": "gsmet",
+   "value": 1
+  },
+  {
+   "source": "afletcher",
+   "target": "gwa",
+   "value": 1
+  },
+  {
+   "source": "afletcher",
+   "target": "juergen.zimmermann",
+   "value": 1
+  },
+  {
+   "source": "afletcher",
+   "target": "laeubi",
+   "value": 1
+  },
+  {
+   "source": "afletcher",
+   "target": "lukasz.antoniak",
+   "value": 7
+  },
+  {
+   "source": "afletcher",
+   "target": "max",
+   "value": 1
+  },
+  {
+   "source": "afletcher",
+   "target": "micw",
+   "value": 1
+  },
+  {
+   "source": "afletcher",
+   "target": "piofinsy",
+   "value": 2
+  },
+  {
+   "source": "afletcher",
+   "target": "smarlow@redhat.com",
+   "value": 6
+  },
+  {
+   "source": "afletcher",
+   "target": "steve",
+   "value": 19
+  },
+  {
+   "source": "afletcher",
+   "target": "stliu",
+   "value": 1
+  },
+  {
+   "source": "afletcher",
+   "target": "szymon.lis",
+   "value": 1
+  },
+  {
+   "source": "afletcher",
+   "target": "teinacher",
+   "value": 1
+  },
+  {
+   "source": "afletcher",
+   "target": "valotas",
+   "value": 1
+  },
+  {
+   "source": "afletcher",
+   "target": "washley",
+   "value": 1
+  },
+  {
+   "source": "bob lai",
+   "target": "bob lai",
+   "value": 1
+  },
+  {
+   "source": "bob lai",
+   "target": "brmeyer",
+   "value": 8
+  },
+  {
+   "source": "bob lai",
+   "target": "ceki",
+   "value": 2
+  },
+  {
+   "source": "bob lai",
+   "target": "gbadner",
+   "value": 6
+  },
+  {
+   "source": "bob lai",
+   "target": "gwa",
+   "value": 2
+  },
+  {
+   "source": "bob lai",
+   "target": "laeubi",
+   "value": 2
+  },
+  {
+   "source": "bob lai",
+   "target": "lukasz.antoniak",
+   "value": 4
+  },
+  {
+   "source": "bob lai",
+   "target": "micw",
+   "value": 2
+  },
+  {
+   "source": "bob lai",
+   "target": "piofinsy",
+   "value": 4
+  },
+  {
+   "source": "bob lai",
+   "target": "smarlow@redhat.com",
+   "value": 6
+  },
+  {
+   "source": "bob lai",
+   "target": "steve",
+   "value": 20
+  },
+  {
+   "source": "bob lai",
+   "target": "teinacher",
+   "value": 2
+  },
+  {
+   "source": "bob lai",
+   "target": "valotas",
+   "value": 2
+  },
+  {
+   "source": "bob lai",
+   "target": "washley",
+   "value": 2
+  },
+  {
+   "source": "brmeyer",
+   "target": "brmeyer",
+   "value": 8
+  },
+  {
+   "source": "brmeyer",
+   "target": "c.bauer",
+   "value": 1
+  },
+  {
+   "source": "brmeyer",
+   "target": "ceki",
+   "value": 6
+  },
+  {
+   "source": "brmeyer",
+   "target": "cvs",
+   "value": 4
+  },
+  {
+   "source": "brmeyer",
+   "target": "emmanuel",
+   "value": 2
+  },
+  {
+   "source": "brmeyer",
+   "target": "gavin",
+   "value": 2
+  },
+  {
+   "source": "brmeyer",
+   "target": "gbadner",
+   "value": 13
+  },
+  {
+   "source": "brmeyer",
+   "target": "gsmet",
+   "value": 2
+  },
+  {
+   "source": "brmeyer",
+   "target": "gwa",
+   "value": 5
+  },
+  {
+   "source": "brmeyer",
+   "target": "juergen.zimmermann",
+   "value": 2
+  },
+  {
+   "source": "brmeyer",
+   "target": "laeubi",
+   "value": 4
+  },
+  {
+   "source": "brmeyer",
+   "target": "lukasz.antoniak",
+   "value": 14
+  },
+  {
+   "source": "brmeyer",
+   "target": "micw",
+   "value": 6
+  },
+  {
+   "source": "brmeyer",
+   "target": "piofinsy",
+   "value": 8
+  },
+  {
+   "source": "brmeyer",
+   "target": "sdouglass",
+   "value": 3
+  },
+  {
+   "source": "brmeyer",
+   "target": "smarlow@redhat.com",
+   "value": 14
+  },
+  {
+   "source": "brmeyer",
+   "target": "sslavic",
+   "value": 2
+  },
+  {
+   "source": "brmeyer",
+   "target": "steve",
+   "value": 65
+  },
+  {
+   "source": "brmeyer",
+   "target": "teinacher",
+   "value": 5
+  },
+  {
+   "source": "brmeyer",
+   "target": "valotas",
+   "value": 4
+  },
+  {
+   "source": "brmeyer",
+   "target": "washley",
+   "value": 4
+  },
+  {
+   "source": "brmeyer",
+   "target": "winter",
+   "value": 1
+  },
+  {
+   "source": "c.bauer",
+   "target": "ceki",
+   "value": 2
+  },
+  {
+   "source": "c.bauer",
+   "target": "gbadner",
+   "value": 1
+  },
+  {
+   "source": "c.bauer",
+   "target": "gwa",
+   "value": 1
+  },
+  {
+   "source": "c.bauer",
+   "target": "sdouglass",
+   "value": 1
+  },
+  {
+   "source": "c.bauer",
+   "target": "steve",
+   "value": 3
+  },
+  {
+   "source": "c.bauer",
+   "target": "winter",
+   "value": 1
+  },
+  {
+   "source": "cbredesen",
+   "target": "cvs",
+   "value": 1
+  },
+  {
+   "source": "cbredesen",
+   "target": "emmanuel",
+   "value": 1
+  },
+  {
+   "source": "cbredesen",
+   "target": "gavin",
+   "value": 1
+  },
+  {
+   "source": "cbredesen",
+   "target": "gionn",
+   "value": 1
+  },
+  {
+   "source": "cbredesen",
+   "target": "lukasz.antoniak",
+   "value": 2
+  },
+  {
+   "source": "cbredesen",
+   "target": "max",
+   "value": 1
+  },
+  {
+   "source": "cbredesen",
+   "target": "steve",
+   "value": 3
+  },
+  {
+   "source": "cbredesen",
+   "target": "szymon.lis",
+   "value": 1
+  },
+  {
+   "source": "ceki",
+   "target": "ceki",
+   "value": 1
+  },
+  {
+   "source": "ceki",
+   "target": "cvs",
+   "value": 1
+  },
+  {
+   "source": "ceki",
+   "target": "gbadner",
+   "value": 5
+  },
+  {
+   "source": "ceki",
+   "target": "gwa",
+   "value": 3
+  },
+  {
+   "source": "ceki",
+   "target": "laeubi",
+   "value": 1
+  },
+  {
+   "source": "ceki",
+   "target": "lukasz.antoniak",
+   "value": 2
+  },
+  {
+   "source": "ceki",
+   "target": "micw",
+   "value": 1
+  },
+  {
+   "source": "ceki",
+   "target": "piofinsy",
+   "value": 2
+  },
+  {
+   "source": "ceki",
+   "target": "sdouglass",
+   "value": 2
+  },
+  {
+   "source": "ceki",
+   "target": "smarlow@redhat.com",
+   "value": 3
+  },
+  {
+   "source": "ceki",
+   "target": "steve",
+   "value": 17
+  },
+  {
+   "source": "ceki",
+   "target": "teinacher",
+   "value": 1
+  },
+  {
+   "source": "ceki",
+   "target": "valotas",
+   "value": 1
+  },
+  {
+   "source": "ceki",
+   "target": "washley",
+   "value": 1
+  },
+  {
+   "source": "ceki",
+   "target": "winter",
+   "value": 2
+  },
+  {
+   "source": "cvs",
+   "target": "cvs",
+   "value": 1
+  },
+  {
+   "source": "cvs",
+   "target": "emmanuel",
+   "value": 3
+  },
+  {
+   "source": "cvs",
+   "target": "galder.zamarreno@jboss.com",
+   "value": 1
+  },
+  {
+   "source": "cvs",
+   "target": "gavin",
+   "value": 3
+  },
+  {
+   "source": "cvs",
+   "target": "gbadner",
+   "value": 1
+  },
+  {
+   "source": "cvs",
+   "target": "gionn",
+   "value": 1
+  },
+  {
+   "source": "cvs",
+   "target": "lukasz.antoniak",
+   "value": 5
+  },
+  {
+   "source": "cvs",
+   "target": "max",
+   "value": 1
+  },
+  {
+   "source": "cvs",
+   "target": "micw",
+   "value": 2
+  },
+  {
+   "source": "cvs",
+   "target": "sdouglass",
+   "value": 2
+  },
+  {
+   "source": "cvs",
+   "target": "smarlow@redhat.com",
+   "value": 2
+  },
+  {
+   "source": "cvs",
+   "target": "sslavic",
+   "value": 2
+  },
+  {
+   "source": "cvs",
+   "target": "steve",
+   "value": 17
+  },
+  {
+   "source": "cvs",
+   "target": "stliu",
+   "value": 1
+  },
+  {
+   "source": "cvs",
+   "target": "szymon.lis",
+   "value": 1
+  },
+  {
+   "source": "emmanuel",
+   "target": "gavin",
+   "value": 2
+  },
+  {
+   "source": "emmanuel",
+   "target": "gionn",
+   "value": 1
+  },
+  {
+   "source": "emmanuel",
+   "target": "lukasz.antoniak",
+   "value": 3
+  },
+  {
+   "source": "emmanuel",
+   "target": "max",
+   "value": 1
+  },
+  {
+   "source": "emmanuel",
+   "target": "micw",
+   "value": 1
+  },
+  {
+   "source": "emmanuel",
+   "target": "paul4christ79",
+   "value": 1
+  },
+  {
+   "source": "emmanuel",
+   "target": "sdouglass",
+   "value": 1
+  },
+  {
+   "source": "emmanuel",
+   "target": "smarlow@redhat.com",
+   "value": 1
+  },
+  {
+   "source": "emmanuel",
+   "target": "sslavic",
+   "value": 1
+  },
+  {
+   "source": "emmanuel",
+   "target": "steve",
+   "value": 12
+  },
+  {
+   "source": "emmanuel",
+   "target": "stliu",
+   "value": 1
+  },
+  {
+   "source": "emmanuel",
+   "target": "szymon.lis",
+   "value": 1
+  },
+  {
+   "source": "emmanuel",
+   "target": "teinacher",
+   "value": 1
+  },
+  {
+   "source": "galder.zamarreno@jboss.com",
+   "target": "gbadner",
+   "value": 1
+  },
+  {
+   "source": "galder.zamarreno@jboss.com",
+   "target": "lukasz.antoniak",
+   "value": 1
+  },
+  {
+   "source": "galder.zamarreno@jboss.com",
+   "target": "smarlow@redhat.com",
+   "value": 2
+  },
+  {
+   "source": "galder.zamarreno@jboss.com",
+   "target": "steve",
+   "value": 1
+  },
+  {
+   "source": "galder.zamarreno@jboss.com",
+   "target": "stliu",
+   "value": 1
+  },
+  {
+   "source": "gavin",
+   "target": "gionn",
+   "value": 1
+  },
+  {
+   "source": "gavin",
+   "target": "lukasz.antoniak",
+   "value": 3
+  },
+  {
+   "source": "gavin",
+   "target": "max",
+   "value": 1
+  },
+  {
+   "source": "gavin",
+   "target": "micw",
+   "value": 1
+  },
+  {
+   "source": "gavin",
+   "target": "sdouglass",
+   "value": 1
+  },
+  {
+   "source": "gavin",
+   "target": "sslavic",
+   "value": 1
+  },
+  {
+   "source": "gavin",
+   "target": "steve",
+   "value": 9
+  },
+  {
+   "source": "gavin",
+   "target": "szymon.lis",
+   "value": 1
+  },
+  {
+   "source": "gbadner",
+   "target": "gbadner",
+   "value": 3
+  },
+  {
+   "source": "gbadner",
+   "target": "gwa",
+   "value": 4
+  },
+  {
+   "source": "gbadner",
+   "target": "laeubi",
+   "value": 3
+  },
+  {
+   "source": "gbadner",
+   "target": "lukasz.antoniak",
+   "value": 7
+  },
+  {
+   "source": "gbadner",
+   "target": "micw",
+   "value": 3
+  },
+  {
+   "source": "gbadner",
+   "target": "piofinsy",
+   "value": 6
+  },
+  {
+   "source": "gbadner",
+   "target": "sdouglass",
+   "value": 1
+  },
+  {
+   "source": "gbadner",
+   "target": "smarlow@redhat.com",
+   "value": 11
+  },
+  {
+   "source": "gbadner",
+   "target": "steve",
+   "value": 34
+  },
+  {
+   "source": "gbadner",
+   "target": "stliu",
+   "value": 1
+  },
+  {
+   "source": "gbadner",
+   "target": "teinacher",
+   "value": 3
+  },
+  {
+   "source": "gbadner",
+   "target": "valotas",
+   "value": 3
+  },
+  {
+   "source": "gbadner",
+   "target": "washley",
+   "value": 3
+  },
+  {
+   "source": "gbadner",
+   "target": "winter",
+   "value": 1
+  },
+  {
+   "source": "gionn",
+   "target": "lukasz.antoniak",
+   "value": 2
+  },
+  {
+   "source": "gionn",
+   "target": "max",
+   "value": 1
+  },
+  {
+   "source": "gionn",
+   "target": "steve",
+   "value": 3
+  },
+  {
+   "source": "gionn",
+   "target": "szymon.lis",
+   "value": 1
+  },
+  {
+   "source": "gsmet",
+   "target": "juergen.zimmermann",
+   "value": 1
+  },
+  {
+   "source": "gsmet",
+   "target": "lukasz.antoniak",
+   "value": 2
+  },
+  {
+   "source": "gsmet",
+   "target": "smarlow@redhat.com",
+   "value": 1
+  },
+  {
+   "source": "gsmet",
+   "target": "steve",
+   "value": 5
+  },
+  {
+   "source": "gwa",
+   "target": "laeubi",
+   "value": 1
+  },
+  {
+   "source": "gwa",
+   "target": "lukasz.antoniak",
+   "value": 2
+  },
+  {
+   "source": "gwa",
+   "target": "micw",
+   "value": 1
+  },
+  {
+   "source": "gwa",
+   "target": "piofinsy",
+   "value": 2
+  },
+  {
+   "source": "gwa",
+   "target": "sdouglass",
+   "value": 1
+  },
+  {
+   "source": "gwa",
+   "target": "smarlow@redhat.com",
+   "value": 3
+  },
+  {
+   "source": "gwa",
+   "target": "steve",
+   "value": 13
+  },
+  {
+   "source": "gwa",
+   "target": "teinacher",
+   "value": 1
+  },
+  {
+   "source": "gwa",
+   "target": "valotas",
+   "value": 1
+  },
+  {
+   "source": "gwa",
+   "target": "washley",
+   "value": 1
+  },
+  {
+   "source": "gwa",
+   "target": "winter",
+   "value": 1
+  },
+  {
+   "source": "juergen.zimmermann",
+   "target": "lukasz.antoniak",
+   "value": 2
+  },
+  {
+   "source": "juergen.zimmermann",
+   "target": "smarlow@redhat.com",
+   "value": 1
+  },
+  {
+   "source": "juergen.zimmermann",
+   "target": "steve",
+   "value": 5
+  },
+  {
+   "source": "laeubi",
+   "target": "lukasz.antoniak",
+   "value": 2
+  },
+  {
+   "source": "laeubi",
+   "target": "micw",
+   "value": 1
+  },
+  {
+   "source": "laeubi",
+   "target": "piofinsy",
+   "value": 2
+  },
+  {
+   "source": "laeubi",
+   "target": "smarlow@redhat.com",
+   "value": 3
+  },
+  {
+   "source": "laeubi",
+   "target": "steve",
+   "value": 10
+  },
+  {
+   "source": "laeubi",
+   "target": "teinacher",
+   "value": 1
+  },
+  {
+   "source": "laeubi",
+   "target": "valotas",
+   "value": 1
+  },
+  {
+   "source": "laeubi",
+   "target": "washley",
+   "value": 1
+  },
+  {
+   "source": "lukasz.antoniak",
+   "target": "lukasz.antoniak",
+   "value": 3
+  },
+  {
+   "source": "lukasz.antoniak",
+   "target": "max",
+   "value": 2
+  },
+  {
+   "source": "lukasz.antoniak",
+   "target": "micw",
+   "value": 3
+  },
+  {
+   "source": "lukasz.antoniak",
+   "target": "piofinsy",
+   "value": 4
+  },
+  {
+   "source": "lukasz.antoniak",
+   "target": "sdouglass",
+   "value": 1
+  },
+  {
+   "source": "lukasz.antoniak",
+   "target": "smarlow@redhat.com",
+   "value": 10
+  },
+  {
+   "source": "lukasz.antoniak",
+   "target": "sslavic",
+   "value": 1
+  },
+  {
+   "source": "lukasz.antoniak",
+   "target": "steve",
+   "value": 43
+  },
+  {
+   "source": "lukasz.antoniak",
+   "target": "stliu",
+   "value": 1
+  },
+  {
+   "source": "lukasz.antoniak",
+   "target": "szymon.lis",
+   "value": 2
+  },
+  {
+   "source": "lukasz.antoniak",
+   "target": "teinacher",
+   "value": 2
+  },
+  {
+   "source": "lukasz.antoniak",
+   "target": "valotas",
+   "value": 2
+  },
+  {
+   "source": "lukasz.antoniak",
+   "target": "washley",
+   "value": 2
+  },
+  {
+   "source": "max",
+   "target": "steve",
+   "value": 3
+  },
+  {
+   "source": "max",
+   "target": "szymon.lis",
+   "value": 1
+  },
+  {
+   "source": "micw",
+   "target": "piofinsy",
+   "value": 2
+  },
+  {
+   "source": "micw",
+   "target": "sdouglass",
+   "value": 1
+  },
+  {
+   "source": "micw",
+   "target": "smarlow@redhat.com",
+   "value": 3
+  },
+  {
+   "source": "micw",
+   "target": "sslavic",
+   "value": 1
+  },
+  {
+   "source": "micw",
+   "target": "steve",
+   "value": 16
+  },
+  {
+   "source": "micw",
+   "target": "teinacher",
+   "value": 1
+  },
+  {
+   "source": "micw",
+   "target": "valotas",
+   "value": 1
+  },
+  {
+   "source": "micw",
+   "target": "washley",
+   "value": 1
+  },
+  {
+   "source": "paul4christ79",
+   "target": "smarlow@redhat.com",
+   "value": 1
+  },
+  {
+   "source": "paul4christ79",
+   "target": "steve",
+   "value": 3
+  },
+  {
+   "source": "paul4christ79",
+   "target": "stliu",
+   "value": 1
+  },
+  {
+   "source": "paul4christ79",
+   "target": "teinacher",
+   "value": 1
+  },
+  {
+   "source": "piofinsy",
+   "target": "piofinsy",
+   "value": 1
+  },
+  {
+   "source": "piofinsy",
+   "target": "smarlow@redhat.com",
+   "value": 6
+  },
+  {
+   "source": "piofinsy",
+   "target": "steve",
+   "value": 20
+  },
+  {
+   "source": "piofinsy",
+   "target": "teinacher",
+   "value": 2
+  },
+  {
+   "source": "piofinsy",
+   "target": "valotas",
+   "value": 2
+  },
+  {
+   "source": "piofinsy",
+   "target": "washley",
+   "value": 2
+  },
+  {
+   "source": "sdouglass",
+   "target": "sslavic",
+   "value": 1
+  },
+  {
+   "source": "sdouglass",
+   "target": "steve",
+   "value": 9
+  },
+  {
+   "source": "sdouglass",
+   "target": "winter",
+   "value": 1
+  },
+  {
+   "source": "smarlow@redhat.com",
+   "target": "smarlow@redhat.com",
+   "value": 4
+  },
+  {
+   "source": "smarlow@redhat.com",
+   "target": "steve",
+   "value": 40
+  },
+  {
+   "source": "smarlow@redhat.com",
+   "target": "stliu",
+   "value": 3
+  },
+  {
+   "source": "smarlow@redhat.com",
+   "target": "teinacher",
+   "value": 4
+  },
+  {
+   "source": "smarlow@redhat.com",
+   "target": "valotas",
+   "value": 3
+  },
+  {
+   "source": "smarlow@redhat.com",
+   "target": "washley",
+   "value": 3
+  },
+  {
+   "source": "sslavic",
+   "target": "steve",
+   "value": 6
+  },
+  {
+   "source": "steve",
+   "target": "steve",
+   "value": 79
+  },
+  {
+   "source": "steve",
+   "target": "stliu",
+   "value": 5
+  },
+  {
+   "source": "steve",
+   "target": "szymon.lis",
+   "value": 3
+  },
+  {
+   "source": "steve",
+   "target": "teinacher",
+   "value": 13
+  },
+  {
+   "source": "steve",
+   "target": "valotas",
+   "value": 10
+  },
+  {
+   "source": "steve",
+   "target": "washley",
+   "value": 10
+  },
+  {
+   "source": "steve",
+   "target": "winter",
+   "value": 3
+  },
+  {
+   "source": "stliu",
+   "target": "teinacher",
+   "value": 1
+  },
+  {
+   "source": "teinacher",
+   "target": "valotas",
+   "value": 1
+  },
+  {
+   "source": "teinacher",
+   "target": "washley",
+   "value": 1
+  },
+  {
+   "source": "valotas",
+   "target": "washley",
+   "value": 1
+  }
+ ],
+ "nodes": [
+  {
+   "group": 1,
+   "id": "acoliver"
+  },
+  {
+   "group": 2,
+   "id": "adamw"
+  },
+  {
+   "group": 3,
+   "id": "adar"
+  },
+  {
+   "group": 4,
+   "id": "afletcher"
+  },
+  {
+   "group": 4,
+   "id": "bob lai"
+  },
+  {
+   "group": 1,
+   "id": "brmeyer"
+  },
+  {
+   "group": 3,
+   "id": "c.bauer"
+  },
+  {
+   "group": 5,
+   "id": "cbredesen"
+  },
+  {
+   "group": 4,
+   "id": "ceki"
+  },
+  {
+   "group": 1,
+   "id": "cvs"
+  },
+  {
+   "group": 1,
+   "id": "emmanuel"
+  },
+  {
+   "group": 2,
+   "id": "galder.zamarreno@jboss.com"
+  },
+  {
+   "group": 1,
+   "id": "gavin"
+  },
+  {
+   "group": 4,
+   "id": "gbadner"
+  },
+  {
+   "group": 5,
+   "id": "gionn"
+  },
+  {
+   "group": 6,
+   "id": "gsmet"
+  },
+  {
+   "group": 4,
+   "id": "gwa"
+  },
+  {
+   "group": 6,
+   "id": "juergen.zimmermann"
+  },
+  {
+   "group": 4,
+   "id": "laeubi"
+  },
+  {
+   "group": 1,
+   "id": "lukasz.antoniak"
+  },
+  {
+   "group": 5,
+   "id": "max"
+  },
+  {
+   "group": 1,
+   "id": "micw"
+  },
+  {
+   "group": 7,
+   "id": "paul4christ79"
+  },
+  {
+   "group": 4,
+   "id": "piofinsy"
+  },
+  {
+   "group": 1,
+   "id": "sdouglass"
+  },
+  {
+   "group": 7,
+   "id": "smarlow@redhat.com"
+  },
+  {
+   "group": 1,
+   "id": "sslavic"
+  },
+  {
+   "group": 1,
+   "id": "steve"
+  },
+  {
+   "group": 7,
+   "id": "stliu"
+  },
+  {
+   "group": 5,
+   "id": "szymon.lis"
+  },
+  {
+   "group": 7,
+   "id": "teinacher"
+  },
+  {
+   "group": 4,
+   "id": "valotas"
+  },
+  {
+   "group": 4,
+   "id": "washley"
+  },
+  {
+   "group": 3,
+   "id": "winter"
+  }
+ ]
+}

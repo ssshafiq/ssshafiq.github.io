@@ -1,8 +1,8 @@
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
 
-// Three.js Scene Setup
-let scene, camera, renderer, particles;
+// Three.js Scene Setup - Software Architecture Visualization
+let scene, camera, renderer, nodes = [], connections = [], lines = [];
 let mouseX = 0, mouseY = 0;
 let windowHalfX = window.innerWidth / 2;
 let windowHalfY = window.innerHeight / 2;
@@ -16,12 +16,13 @@ function initThreeJS() {
 
     // Camera
     camera = new THREE.PerspectiveCamera(
-        75,
+        60,
         window.innerWidth / window.innerHeight,
         0.1,
-        1000
+        2000
     );
-    camera.position.z = 1000;
+    camera.position.set(0, 0, 800);
+    camera.lookAt(0, 0, 0);
 
     // Renderer
     renderer = new THREE.WebGLRenderer({
@@ -32,45 +33,106 @@ function initThreeJS() {
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
 
-    // Create particle system
-    const particleCount = 2000;
-    const geometry = new THREE.BufferGeometry();
-    const positions = new Float32Array(particleCount * 3);
-    const colors = new Float32Array(particleCount * 3);
-
-    const color1 = new THREE.Color(0xffffff);
-    const color2 = new THREE.Color(0x6366f1);
-    const color3 = new THREE.Color(0x8b5cf6);
-
-    for (let i = 0; i < particleCount * 3; i += 3) {
-        positions[i] = (Math.random() - 0.5) * 2000;
-        positions[i + 1] = (Math.random() - 0.5) * 2000;
-        positions[i + 2] = (Math.random() - 0.5) * 2000;
-
-        const colorChoice = Math.random();
-        let color;
-        if (colorChoice < 0.33) color = color1;
-        else if (colorChoice < 0.66) color = color2;
-        else color = color3;
-
-        colors[i] = color.r;
-        colors[i + 1] = color.g;
-        colors[i + 2] = color.b;
-    }
-
-    geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-    geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
-
-    const material = new THREE.PointsMaterial({
-        size: 3,
-        vertexColors: true,
+    // Create software architecture nodes (components) - White/Gold for contrast
+    const nodeCount = 12;
+    const nodeGeometry = new THREE.BoxGeometry(40, 40, 40);
+    const nodeMaterial = new THREE.MeshBasicMaterial({
+        color: 0xFFFFFF, // White for visibility against red background
         transparent: true,
-        opacity: 0.6,
-        blending: THREE.AdditiveBlending
+        opacity: 0.9,
+        wireframe: false
+    });
+    
+    // Alternate some nodes with gold for variety
+    const goldMaterial = new THREE.MeshBasicMaterial({
+        color: 0xFFCC00, // USC Gold
+        transparent: true,
+        opacity: 0.8,
+        wireframe: false
     });
 
-    particles = new THREE.Points(geometry, material);
-    scene.add(particles);
+    // Create nodes in a layered architecture pattern
+    const layers = 3;
+    const nodesPerLayer = Math.ceil(nodeCount / layers);
+    
+    for (let layer = 0; layer < layers; layer++) {
+        const layerZ = (layer - 1) * 200;
+        const nodesInThisLayer = layer === layers - 1 ? nodeCount - (layer * nodesPerLayer) : nodesPerLayer;
+        
+        for (let i = 0; i < nodesInThisLayer; i++) {
+            const angle = (i / nodesInThisLayer) * Math.PI * 2;
+            const radius = 150 + layer * 50;
+            const x = Math.cos(angle) * radius;
+            const y = Math.sin(angle) * radius;
+            
+            // Alternate between white and gold materials for visual variety
+            const material = (i % 2 === 0) ? nodeMaterial.clone() : goldMaterial.clone();
+            const node = new THREE.Mesh(nodeGeometry, material);
+            node.position.set(x, y, layerZ);
+            node.userData = {
+                originalPosition: { x, y, z: layerZ },
+                layer: layer,
+                angle: angle
+            };
+            
+            scene.add(node);
+            nodes.push(node);
+        }
+    }
+
+    // Create connections between nodes (architectural relationships) - Light colors for visibility
+    const lineMaterial = new THREE.LineBasicMaterial({
+        color: 0xFFFFFF, // White lines for visibility
+        transparent: true,
+        opacity: 0.5
+    });
+    
+    // Gold lines for cross-layer connections
+    const goldLineMaterial = new THREE.LineBasicMaterial({
+        color: 0xFFCC00, // USC Gold for important connections
+        transparent: true,
+        opacity: 0.4
+    });
+
+    // Connect nodes within same layer - White lines
+    for (let layer = 0; layer < layers; layer++) {
+        const layerNodes = nodes.filter(n => n.userData.layer === layer);
+        for (let i = 0; i < layerNodes.length; i++) {
+            const from = layerNodes[i];
+            const to = layerNodes[(i + 1) % layerNodes.length];
+            
+            const geometry = new THREE.BufferGeometry().setFromPoints([
+                new THREE.Vector3(from.position.x, from.position.y, from.position.z),
+                new THREE.Vector3(to.position.x, to.position.y, to.position.z)
+            ]);
+            const line = new THREE.Line(geometry, lineMaterial.clone());
+            line.userData = { from: from, to: to };
+            scene.add(line);
+            connections.push(line);
+        }
+    }
+
+    // Connect nodes between layers (cross-layer dependencies) - Gold lines
+    for (let layer = 0; layer < layers - 1; layer++) {
+        const currentLayerNodes = nodes.filter(n => n.userData.layer === layer);
+        const nextLayerNodes = nodes.filter(n => n.userData.layer === layer + 1);
+        
+        // Connect each node to nearest nodes in next layer
+        currentLayerNodes.forEach(fromNode => {
+            const connectionsToNext = Math.min(2, nextLayerNodes.length);
+            for (let i = 0; i < connectionsToNext; i++) {
+                const toNode = nextLayerNodes[i % nextLayerNodes.length];
+                const geometry = new THREE.BufferGeometry().setFromPoints([
+                    new THREE.Vector3(fromNode.position.x, fromNode.position.y, fromNode.position.z),
+                    new THREE.Vector3(toNode.position.x, toNode.position.y, toNode.position.z)
+                ]);
+                const line = new THREE.Line(geometry, goldLineMaterial.clone());
+                line.userData = { from: fromNode, to: toNode };
+                scene.add(line);
+                connections.push(line);
+            }
+        });
+    }
 
     // Mouse movement
     document.addEventListener('mousemove', onDocumentMouseMove, false);
@@ -80,8 +142,8 @@ function initThreeJS() {
 }
 
 function onDocumentMouseMove(event) {
-    mouseX = (event.clientX - windowHalfX) * 0.1;
-    mouseY = (event.clientY - windowHalfY) * 0.1;
+    mouseX = (event.clientX - windowHalfX) * 0.001;
+    mouseY = (event.clientY - windowHalfY) * 0.001;
 }
 
 function onWindowResize() {
@@ -96,121 +158,154 @@ function onWindowResize() {
 function animate() {
     requestAnimationFrame(animate);
 
-    if (particles) {
-        particles.rotation.x += 0.0005;
-        particles.rotation.y += 0.001;
+    // Rotate the entire architecture slowly
+    const time = Date.now() * 0.0005;
+    
+    nodes.forEach((node, index) => {
+        const origPos = node.userData.originalPosition;
+        const layer = node.userData.layer;
+        
+        // Slow rotation around center
+        const angle = node.userData.angle + time * 0.1;
+        const radius = 150 + layer * 50;
+        const x = Math.cos(angle) * radius;
+        const y = Math.sin(angle) * radius;
+        
+        // Subtle vertical float
+        const floatOffset = Math.sin(time * 2 + index) * 10;
+        
+        node.position.x = x;
+        node.position.y = y + floatOffset;
+        
+        // Rotate nodes slightly
+        node.rotation.x += 0.01;
+        node.rotation.y += 0.01;
+    });
 
-        camera.position.x += (mouseX - camera.position.x) * 0.05;
-        camera.position.y += (-mouseY - camera.position.y) * 0.05;
-        camera.lookAt(scene.position);
-    }
+    // Update connection lines to follow nodes
+    connections.forEach((line) => {
+        if (line.userData && line.userData.from && line.userData.to) {
+            const from = line.userData.from;
+            const to = line.userData.to;
+            
+            const positions = line.geometry.attributes.position;
+            positions.setXYZ(0, from.position.x, from.position.y, from.position.z);
+            positions.setXYZ(1, to.position.x, to.position.y, to.position.z);
+            positions.needsUpdate = true;
+        }
+    });
+
+    // Subtle camera movement
+    camera.position.x += (mouseX * 50 - camera.position.x) * 0.05;
+    camera.position.y += (-mouseY * 50 - camera.position.y) * 0.05;
+    camera.lookAt(0, 0, 0);
 
     renderer.render(scene, camera);
 }
 
 // GSAP Animations
 function initAnimations() {
-    // Hero section animations (home page only)
+    // Hero section animations (home page only) - More subtle and academic
     gsap.from('.title-line', {
-        duration: 1,
-        y: 100,
+        duration: 1.2,
+        y: 30,
         opacity: 0,
-        stagger: 0.2,
-        ease: 'power4.out'
+        stagger: 0.15,
+        ease: 'power2.out'
     });
 
     gsap.from('.hero-subtitle', {
         duration: 1,
-        y: 50,
+        y: 20,
         opacity: 0,
-        delay: 0.5,
-        ease: 'power3.out'
+        delay: 0.4,
+        ease: 'power2.out'
     });
 
     gsap.from('.hero-buttons', {
+        duration: 0.8,
+        y: 15,
+        opacity: 0,
+        delay: 0.6,
+        ease: 'power2.out'
+    });
+
+    // Page header animations - Subtle and professional
+    gsap.from('.page-title', {
         duration: 1,
         y: 30,
         opacity: 0,
-        delay: 0.8,
-        ease: 'power3.out'
-    });
-
-    // Page header animations
-    gsap.from('.page-title', {
-        duration: 1,
-        y: 50,
-        opacity: 0,
-        ease: 'power3.out'
+        ease: 'power2.out'
     });
 
     gsap.from('.page-subtitle', {
-        duration: 1,
-        y: 30,
+        duration: 0.8,
+        y: 20,
         opacity: 0,
-        delay: 0.3,
-        ease: 'power3.out'
+        delay: 0.2,
+        ease: 'power2.out'
     });
 
-    // Section title animations
+    // Section title animations - More subtle
     gsap.utils.toArray('.section-title').forEach(title => {
         gsap.from(title, {
             scrollTrigger: {
                 trigger: title,
-                start: 'top 80%',
+                start: 'top 85%',
                 toggleActions: 'play none none none'
             },
-            duration: 1,
-            y: 50,
+            duration: 0.8,
+            y: 25,
             opacity: 0,
-            ease: 'power3.out'
+            ease: 'power2.out'
         });
     });
 
-    // Research cards animations
+    // Research cards animations - Subtle fade and slide
     gsap.utils.toArray('.research-card').forEach((card, index) => {
         gsap.from(card, {
             scrollTrigger: {
                 trigger: card,
-                start: 'top 85%',
+                start: 'top 90%',
                 toggleActions: 'play none none none'
             },
-            duration: 0.8,
-            y: 50,
+            duration: 0.6,
+            y: 20,
             opacity: 0,
-            delay: index * 0.1,
-            ease: 'power3.out'
+            delay: index * 0.05,
+            ease: 'power2.out'
         });
     });
 
-    // Domain sections animations (research page)
+    // Domain sections animations - Subtle
     gsap.utils.toArray('.domain-section').forEach((section, index) => {
         gsap.from(section, {
             scrollTrigger: {
                 trigger: section,
-                start: 'top 85%',
+                start: 'top 90%',
                 toggleActions: 'play none none none'
             },
-            duration: 1,
-            y: 50,
+            duration: 0.8,
+            y: 25,
             opacity: 0,
-            delay: index * 0.1,
-            ease: 'power3.out'
+            delay: index * 0.08,
+            ease: 'power2.out'
         });
     });
 
-    // Team member animations
+    // Team member animations - Subtle fade
     gsap.utils.toArray('.team-member').forEach((member, index) => {
         gsap.from(member, {
             scrollTrigger: {
                 trigger: member,
-                start: 'top 85%',
+                start: 'top 90%',
                 toggleActions: 'play none none none'
             },
-            duration: 0.8,
-            scale: 0.8,
+            duration: 0.6,
+            y: 20,
             opacity: 0,
-            delay: index * 0.15,
-            ease: 'back.out(1.7)'
+            delay: index * 0.08,
+            ease: 'power2.out'
         });
     });
 
@@ -246,35 +341,35 @@ function initAnimations() {
         });
     });
 
-    // Publication animations
+    // Publication animations - Subtle slide
     gsap.utils.toArray('.publication-item').forEach((item, index) => {
         gsap.from(item, {
             scrollTrigger: {
                 trigger: item,
-                start: 'top 85%',
+                start: 'top 90%',
                 toggleActions: 'play none none none'
             },
-            duration: 0.8,
-            x: -50,
+            duration: 0.6,
+            x: -20,
             opacity: 0,
-            delay: index * 0.1,
-            ease: 'power3.out'
+            delay: index * 0.05,
+            ease: 'power2.out'
         });
     });
 
-    // Publication detailed animations (publications page)
+    // Publication detailed animations - Subtle
     gsap.utils.toArray('.publication-item-detailed').forEach((item, index) => {
         gsap.from(item, {
             scrollTrigger: {
                 trigger: item,
-                start: 'top 85%',
+                start: 'top 90%',
                 toggleActions: 'play none none none'
             },
-            duration: 0.8,
-            x: -50,
+            duration: 0.6,
+            x: -20,
             opacity: 0,
-            delay: index * 0.1,
-            ease: 'power3.out'
+            delay: index * 0.05,
+            ease: 'power2.out'
         });
     });
 

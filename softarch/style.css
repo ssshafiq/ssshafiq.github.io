@@ -6,17 +6,21 @@
 }
 
 :root {
-    --primary-color: #6366f1;
-    --primary-dark: #4f46e5;
-    --secondary-color: #8b5cf6;
-    --accent-color: #ec4899;
-    --text-dark: #1f2937;
-    --text-light: #6b7280;
-    --bg-light: #f9fafb;
+    /* USC Brand Colors */
+    --primary-color: #990000; /* USC Cardinal Red */
+    --primary-dark: #7a0000; /* Darker Cardinal */
+    --secondary-color: #FFCC00; /* USC Gold */
+    --accent-color: #CC0000; /* Bright Cardinal */
+    --text-dark: #1a1a1a; /* Dark gray for text */
+    --text-light: #4a4a4a; /* Medium gray */
+    --bg-light: #f5f5f5; /* Light background */
     --bg-white: #ffffff;
-    --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --accent-gold: #FFCC00; /* USC Gold */
+    --accent-gray: #666666; /* USC Gray */
+    --gradient-1: linear-gradient(135deg, #990000 0%, #990000 100%); /* Pure Cardinal */
+    --gradient-2: linear-gradient(135deg, #990000 0%, #7a0000 100%); /* Cardinal to darker */
+    --gradient-3: linear-gradient(135deg, #990000 0%, #FFCC00 100%); /* Cardinal to Gold */
+    --border-color: #e0e0e0;
 }
 
 html {
@@ -24,10 +28,16 @@ html {
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    line-height: 1.6;
+    font-family: 'Georgia', 'Times New Roman', 'Times', serif;
+    line-height: 1.7;
     color: var(--text-dark);
     overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
 }
 
 .container {
@@ -143,7 +153,7 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #990000;
 }
 
 #three-canvas {
@@ -201,11 +211,12 @@ body {
 .btn-primary {
     background: white;
     color: var(--primary-color);
+    font-weight: 600;
 }
 
 .btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(153, 0, 0, 0.25);
 }
 
 .btn-secondary {
@@ -217,7 +228,8 @@ body {
 .btn-secondary:hover {
     background: white;
     color: var(--primary-color);
-    transform: translateY(-3px);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
 }
 
 .scroll-indicator {
@@ -279,7 +291,7 @@ section {
 .title-underline {
     width: 80px;
     height: 4px;
-    background: var(--gradient-1);
+    background: linear-gradient(135deg, #990000 0%, #FFCC00 100%);
     margin: 0 auto;
     border-radius: 2px;
 }
@@ -349,8 +361,9 @@ section {
 .research-card {
     background: white;
     padding: 2.5rem;
-    border-radius: 20px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -363,7 +376,7 @@ section {
     left: 0;
     width: 100%;
     height: 4px;
-    background: var(--gradient-1);
+    background: linear-gradient(135deg, #990000 0%, #FFCC00 100%);
     transform: scaleX(0);
     transition: transform 0.3s ease;
 }
@@ -373,15 +386,16 @@ section {
 }
 
 .research-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(153, 0, 0, 0.15);
+    border-color: var(--primary-color);
 }
 
 .card-icon {
-    width: 60px;
-    height: 60px;
-    background: var(--gradient-1);
-    border-radius: 15px;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -423,7 +437,7 @@ section {
 }
 
 .team-member:hover {
-    transform: translateY(-10px);
+    transform: translateY(-3px);
 }
 
 .member-avatar {
@@ -431,7 +445,7 @@ section {
     height: 150px;
     margin: 0 auto 1.5rem;
     border-radius: 50%;
-    background: var(--gradient-1);
+    background: #990000;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -489,17 +503,19 @@ section {
 .publication-item {
     background: white;
     padding: 2rem;
-    border-radius: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
     margin-bottom: 1.5rem;
     display: flex;
     gap: 2rem;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     transition: all 0.3s ease;
 }
 
 .publication-item:hover {
-    transform: translateX(10px);
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(153, 0, 0, 0.15);
+    border-color: var(--primary-color);
 }
 
 .pub-year {
@@ -538,18 +554,19 @@ section {
 }
 
 .overview-card {
-    background: var(--bg-light);
+    background: white;
     padding: 2.5rem;
-    border-radius: 20px;
+    border-radius: 8px;
     text-align: center;
     transition: all 0.3s ease;
-    border: 2px solid transparent;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .overview-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
     border-color: var(--primary-color);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(153, 0, 0, 0.15);
 }
 
 .overview-card h3 {
@@ -570,7 +587,7 @@ section {
 
 /* Page Header */
 .page-header {
-    background: var(--gradient-1);
+    background: #990000;
     padding: 8rem 0 4rem;
     text-align: center;
     color: white;
@@ -619,7 +636,7 @@ section {
     left: 0;
     width: 80px;
     height: 4px;
-    background: var(--gradient-1);
+    background: linear-gradient(135deg, #990000 0%, #FFCC00 100%);
     border-radius: 2px;
 }
 
@@ -727,14 +744,14 @@ section {
 .achievement-item {
     text-align: center;
     padding: 2rem;
-    background: var(--gradient-1);
+    background: #990000;
     border-radius: 15px;
     color: white;
     transition: transform 0.3s ease;
 }
 
 .achievement-item:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .achievement-number {
@@ -761,15 +778,18 @@ section {
 
 .domain-section {
     margin-bottom: 5rem;
-    background: var(--bg-light);
-    border-radius: 20px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
     padding: 3rem;
     transition: transform 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .domain-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(153, 0, 0, 0.15);
+    border-color: var(--primary-color);
 }
 
 .domain-header {
@@ -778,14 +798,14 @@ section {
     gap: 1.5rem;
     margin-bottom: 2rem;
     padding-bottom: 1.5rem;
-    border-bottom: 2px solid rgba(99, 102, 241, 0.2);
+    border-bottom: 2px solid rgba(153, 0, 0, 0.2);
 }
 
 .domain-icon {
-    width: 60px;
-    height: 60px;
-    background: var(--gradient-1);
-    border-radius: 15px;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -882,22 +902,25 @@ section {
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background: var(--gradient-1);
+    background: linear-gradient(135deg, #990000 0%, #FFCC00 100%);
     border-radius: 2px;
 }
 
 .team-member-detailed {
-    background: var(--bg-light);
+    background: white;
+    border: 1px solid var(--border-color);
     padding: 2.5rem;
-    border-radius: 20px;
+    border-radius: 8px;
     text-align: center;
     transition: transform 0.3s ease;
     margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .team-member-detailed:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(153, 0, 0, 0.15);
+    border-color: var(--primary-color);
 }
 
 .team-member-detailed .member-avatar {
@@ -975,7 +998,7 @@ section {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background: var(--gradient-1);
+    background: #990000;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1036,23 +1059,26 @@ section {
     left: 0;
     width: 80px;
     height: 4px;
-    background: var(--gradient-1);
+    background: linear-gradient(135deg, #990000 0%, #FFCC00 100%);
     border-radius: 2px;
 }
 
 .publication-item-detailed {
-    background: var(--bg-light);
+    background: white;
+    border: 1px solid var(--border-color);
     padding: 2.5rem;
-    border-radius: 15px;
+    border-radius: 8px;
     margin-bottom: 2rem;
     display: flex;
     gap: 2rem;
     transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .publication-item-detailed:hover {
-    transform: translateX(10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(153, 0, 0, 0.15);
+    border-color: var(--primary-color);
 }
 
 .publication-item-detailed .pub-year {
@@ -1110,7 +1136,7 @@ section {
 .pub-link:hover {
     background: var(--primary-dark);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 5px 15px rgba(153, 0, 0, 0.3);
 }
 
 /* Contact Page */
@@ -1147,7 +1173,7 @@ section {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background: var(--gradient-1);
+    background: #990000;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1195,7 +1221,7 @@ section {
 .contact-icon-small {
     width: 40px;
     height: 40px;
-    background: var(--gradient-1);
+    background: #990000;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -1244,14 +1270,15 @@ section {
 }
 
 .contact-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(153, 0, 0, 0.15);
+    border-color: var(--primary-color);
 }
 
 .contact-icon-large {
     width: 70px;
     height: 70px;
-    background: var(--gradient-1);
+    background: #990000;
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -1390,7 +1417,7 @@ section {
 .contact-icon {
     width: 50px;
     height: 50px;
-    background: var(--gradient-1);
+    background: #990000;
     border-radius: 12px;
     display: flex;
     align-items: center;
